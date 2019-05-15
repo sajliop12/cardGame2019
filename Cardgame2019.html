@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body, html { height: 100%; width: 100%; margin: 0;}
+      #backGround
+      {
+        position: absolute; width: 100%; height: 100%;
+        background-image: url(789.jpg); background-position: center; background-attachment: fixed;
+        animation: animatebackground 200s linear infinite;
+      }
+      @keyframes animatebackground
+      {
+        from {background-position: 0 0;}
+        to {background-position: 2000px 1000px;}
+      }
+
+      .Players
+      {
+        position: absolute;
+        width: 25%; height: 25%;
+        border: 3px solid red; box-shadow: 10px 10px 30px white;
+      }
+      .playersInfo
+      {
+        position: absolute;
+        top: 66%;
+        border-top: 3px solid red;
+        height: 34%; width: 100%;
+      }
+      .playersCardTable { position: absolute; height: 66%; width: 100%; }
+      .playersPicture { position: absolute; height: 100%; width: 25%; border-right: 3px solid red; }
+      .playersStatus { position: absolute; height: 100%; width: 75%; left: 25%; }
+
+      .Buttons
+      {
+        position: absolute;
+        width: 40%; height: 40%;
+        top: 30%;
+        box-shadow: 10px 10px 30px white;
+        font-family: fantasy; font-weight: bold; font-size: 100%;
+        border: 2px solid rgb(100,100,100);
+      }
+
+      .topBottom { right:40%; left:37.5%; }
+      .sidePlayer { top: 37.5%; bottom: 40%; }
+
+      #bettingTable
+      {
+        border-radius: 100px 100px 100px 100px;
+        position: absolute;
+        width: 35%; height: 30%;
+        border: 3px solid white;
+        top:35%; left: 32.5%;
+        box-shadow: 10px 10px 30px powderblue;
+      }
+      #betdiebuttonTable { position: absolute; width: 30%; height: 15%; top: 80%; left: 65%;}
+      #startExitTable { position: absolute; width: 30%; height: 10%; top: 2.5%; left: 67.5%;}
+
+      #myInfo
+      {
+        position:absolute;
+        width: 30%; height: 25%;
+        border: 3px solid red;
+        top: 75%; top: 74%;
+        box-shadow: 10px 10px 30px white;
+      }
+      #myPicture { position:absolute; width: 35%; height: 65%; border-right: 3px solid red;}
+      #myScore { position: absolute; width: 65%; height: 65%; left: 35%;}
+      #myMoney { position: absolute; width: 100%; height: 35%; top: 65%; border-top: 3px solid red;}
+
+      #betButton {left:5%;}
+      #dieButton {left:55%;}
+      #startButton {left: 5%;}
+      #exitButton {left: 55%;}
+
+      #topPlayer { top: 5%; }
+      #selfPlayer { top: 70%; }
+      #rightPlayer { left: 70%; }
+      #leftPlayer { left: 5%; }
+
+    </style>
+  </head>
+  <body>
+    <div id="backGround">
+      <div id=bettingTable></p></div>                 <!-- 베팅 테이블 -->
+
+      <div id="myInfo">                                         <!-- 왼쪽밑 내 정보 테이블 -->
+        <div id="myPicture">내 사진</div>
+        <div id="myMoney">내 현재 돈</div>
+        <div id="myScore">내 현재 스코어</div>
+      </div>
+
+      <div id="betdiebuttonTable">                              <!-- 베팅, 다이 버튼 테이블 -->
+        <div><input id="betButton" class="Buttons" type="button" value="B E T"></div>
+        <div><input id="dieButton" class="Buttons" type="button" value="D I E"></div>
+      </div>
+
+      <div id="startExitTable">                                 <!-- 시작, 종료 버튼 테이블 -->
+        <div class=""><input id="startButton" class="Buttons" type="button" value="게임시작"></div>
+        <div class=""><input id="exitButton"  class="Buttons" type="button" value="게임종료"></div>
+      </div>
+
+      <div id=topPlayer class="Players topBottom">              <!-- 맨 윗 플레이어 -->
+        <div class="playersCardTable">카드 테이블</div>
+        <div class="playersInfo">
+          <div class="playersPicture">사진</div>
+          <div class="playersStatus">현황판</div>
+        </div>
+      </div>
+
+      <div id=leftPlayer class="Players sidePlayer">              <!--  왼쪽 플레이어 -->
+        <div class="playersCardTable">카드 테이블</div>
+        <div class="playersInfo">
+          <div class="playersPicture">사진</div>
+          <div class="playersStatus">현황판</div>
+        </div>
+      </div>
+
+      <div id=rightPlayer class="Players sidePlayer">              <!-- 오른쪽 플레이어 -->
+        <div class="playersCardTable">카드 테이블</div>
+        <div class="playersInfo">
+          <div class="playersPicture">사진</div>
+          <div class="playersStatus">현황판</div>
+        </div>
+      </div>
+
+      <div id=selfPlayer class="Players topBottom">              <!-- 본인 플레이어 -->
+        <div class="playersCardTable">카드 테이블</div>
+        <div class="playersInfo">
+          <div class="playersPicture">사진</div>
+          <div class="playersStatus">현황판</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
