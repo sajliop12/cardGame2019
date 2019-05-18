@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body, html { height: 100%; width: 100%; margin: 0;}
+      #backGround
+      {
+        position: absolute; width: 100%; height: 100%;
+        background-image: url(https://sajliop12.github.io/cardGame2019/789.jpg); background-position: center; background-attachment: fixed;
+        animation: animatebackground 200s linear infinite;
+      }
+      @keyframes animatebackground
+      {
+        from {background-position: 0 0;}
+        to {background-position: 2000px 1000px;}
+      }
+
+      .title { position: absolute; top: 7%; left: 16%; border: 5px solid white; width:70%; height:20%;}
+      .player { position: absolute; width: 30%; height: 5%; border: 2px solid white; top: 55%; left: 35%; }
+      #player_name { position: absolute; width: 80%; height: 100%; border-right: 2px solid white;}
+      #player_check { position: absolute; width: 20%; height: 100%; left: 80%;}
+      #write { position: absolute; width: 30%; height: 10%; top: 40%; left: 35%;}
+    </style>
+  </head>
+  <body>
+    <div id="backGround">
+      <div style="line-height:170px; text-align:center; color:white; font-size:70px;" class="title"><strong>Universe Poker Game 2019</strong></div>
+      <div id="write" style="line-height: 60px; text-align:center; color:white; font-size:40px;"><strong>사용자명을 적어주세요.</strong></div>
+      <div class="player">
+        <div id="player_name" style="line-height: 45px; text-align:center; color:white;"><input type="text" color="white" style="font-size:20px;text-align:center; width:99.5%; height:86%;"></div>
+        <div id="player_check" style="line-height: 45px; text-align:center; color:white;"><input type="button" value="확인" style="width:100%; height:100%"></div>
+      </div>
+  </div>
+    <embed src="https://sajliop12.github.io/cardGame2019/sing.mp3" autoplay hidden="true">
+  </body>
+</html>
